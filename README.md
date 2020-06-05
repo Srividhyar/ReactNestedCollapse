@@ -1,2 +1,0 @@
-# ReactNestedCollapse
-Created with CodeSandbox
