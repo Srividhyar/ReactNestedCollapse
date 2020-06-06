@@ -22,23 +22,16 @@ const Collapse = () => {
       buttonCurrent.classList.add("plus");
     }
   };
-  const groupRef = useRef([
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef()
-  ]);
-  const divisionRef = useRef([
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef(),
-    React.createRef()
-  ]);
-  console.log(divisionRef);
+  const groupRef = useRef(
+    Array(4)
+      .fill(null)
+      .map(() => React.createRef())
+  );
+  const divisionRef = useRef(
+    Array(8)
+      .fill(null)
+      .map(() => React.createRef())
+  );
   let divGlobalIndex = -1;
   return (
     <CollapseStyle>
